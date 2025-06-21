@@ -20,19 +20,18 @@ document.addEventListener('DOMContentLoaded', function () {
         if (usernameValue.length < 3) {
             isValid = false;
             messages.push('Username too small');
-            alert(messages[0]);
         }
 
         if (!(emailValue.includes('@') && emailValue.includes('.'))) {
             isValid = false;
             messages.push('Email not valid');
-            alert(messages[1]);
+
         }
 
         if (passwordValue.length < 8) {
             isValid = false;
             messages.push('Password too short');
-            alert(messages[2]);
+    
         }
 
          feedbackDiv.style.display = 'block';
