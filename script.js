@@ -1,5 +1,9 @@
 
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
+
     const form = document.getElementById('registration-form');
     const feedbackDiv = document.getElementById('form-feedback');
 
@@ -17,18 +21,18 @@ document.addEventListener('DOMContentLoaded', function () {
         let isValid = true;
         const messages = [];
 
-        if (usernameValue.length < 3) {
+        if (username.length < 3) {
             isValid = false;
             messages.push('Username too small');
         }
 
-        if (!(emailValue.includes('@') && emailValue.includes('.'))) {
+        if (!(email.includes('@') && emailValue.includes('.'))) {
             isValid = false;
             messages.push('Email not valid');
 
         }
 
-        if (passwordValue.length < 8) {
+        if (password.length < 8) {
             isValid = false;
             messages.push('Password too short');
     
@@ -41,9 +45,6 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             feedbackDiv.innerHTML = messages.join('<br>');
             feedbackDiv.style.color = '#dc3545'; 
-        }
-
-       
-        
+        }  
     });
 });
